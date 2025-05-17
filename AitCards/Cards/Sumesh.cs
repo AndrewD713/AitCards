@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using UnboundLib;
 using UnboundLib.Cards;
 using UnityEngine;
+using RarityLib.Utils;
+using static CardInfoStat;
 
 
 namespace AitCards.Cards
@@ -17,9 +19,12 @@ namespace AitCards.Cards
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             UnityEngine.Debug.Log($"[{AitCards.ModInitials}][Card] {GetTitle()} has been setup.");
-            block.forceToAdd = 0.5f;
-            statModifiers.health = 1.2f;
-            block.cdAdd = 0.25f;
+
+            gun.attackSpeed = 0.2f;
+            gun.damage = 2f;
+            gun.reloadTime = 0f;
+            statModifiers.movementSpeed = 0f;
+            statModifiers.numberOfJumps = -500;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -43,35 +48,57 @@ namespace AitCards.Cards
         }
         protected override GameObject GetCardArt()
         {
-            return null;
+            return Assets.Sumesh;
         }
         protected override CardInfo.Rarity GetRarity()
         {
-            return CardInfo.Rarity.Common;
+            return RarityUtils.GetRarity("Legendary");
         }
         protected override CardInfoStat[] GetStats()
         {
             return new CardInfoStat[]
             {
-                new CardInfoStat()
+                new CardInfoStat
                 {
                     positive = true,
-                    stat = "Health",
-                    amount = "+20%",
-                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
-                 },
-                new CardInfoStat()
+                    stat = "Attack Speed",
+                    amount = "+400%",
+                    simepleAmount = SimpleAmount.aHugeAmountOf
+                },
+                new CardInfoStat
+                {
+                    positive = true,
+                    stat = "Damage",
+                    amount = "+100%",
+                    simepleAmount = SimpleAmount.aHugeAmountOf
+                },
+                new CardInfoStat
+                {
+                    positive = true,
+                    stat = "Ammo",
+                    amount = "Infinite",
+                    simepleAmount = SimpleAmount.notAssigned
+                },
+                new CardInfoStat
                 {
                     positive = false,
-                    stat = "Block Cooldown",
-                    amount = "+0.25s",
-                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                    stat = "Movement Speed",
+                    amount = "Zero",
+                    simepleAmount = SimpleAmount.notAssigned
+                },
+                new CardInfoStat
+                {
+                    positive = false,
+                    stat = "Jumps",
+                    amount = "Zero",
+                    simepleAmount = SimpleAmount.notAssigned
                 }
+
             };
         }
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.ColdBlue;
+            return CardThemeColor.CardThemeColorType.FirepowerYellow;
         }
         public override string GetModName()
         {
