@@ -42,6 +42,7 @@ namespace AitCards
             CustomCard.BuildCard<DarnGoodCoffee>();
             CustomCard.BuildCard<Windjammers2>();
             CustomCard.BuildCard<Him>();
+            CustomCard.BuildCard<SplitTheMob>();
         }
     }
 }

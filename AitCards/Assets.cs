@@ -16,5 +16,6 @@ namespace AitCards
         public static GameObject DarnGoodCoffee = Bundle.LoadAsset<GameObject>("C_DarnGoodCoffee");
         public static GameObject Windjammers2 = Bundle.LoadAsset<GameObject>("C_Windjammers2");
         public static GameObject Him = Bundle.LoadAsset<GameObject>("C_Him");
+        public static GameObject SplitTheMob = Bundle.LoadAsset<GameObject>("C_SplitTheMob");
     }
 }
