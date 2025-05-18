@@ -40,6 +40,8 @@ namespace AitCards
             CustomCard.BuildCard<ThreeStars>();
             CustomCard.BuildCard<HesBadAtGames>();
             CustomCard.BuildCard<DarnGoodCoffee>();
+            CustomCard.BuildCard<Windjammers2>();
+            CustomCard.BuildCard<Him>();
         }
     }
 }
