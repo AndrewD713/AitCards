@@ -1,13 +1,18 @@
-﻿using UnboundLib.Cards;
+﻿using RarityLib.Utils;
+using UnboundLib.Cards;
 using UnityEngine;
+using static CardInfoStat;
 
 namespace AitCards.Cards
 {
-    class PlentyOfParking : CustomCard
+    class Babth : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
-            gun.ammo = 43;
+            gun.projectileSize = 3f;
+            gun.damage = 3f;
+            gun.ammo = -100;
+            gun.reloadTime = 1.5f;
         }
 
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
@@ -20,22 +25,22 @@ namespace AitCards.Cards
 
         protected override string GetTitle()
         {
-            return "Plenty of Parking";
+            return "B.A.B.T.H.";
         }
 
         protected override string GetDescription()
         {
-            return "He personally counted 43 empty spots.";
+            return "Watch out! He's got that big ass bullet that hurts!";
         }
 
         protected override GameObject GetCardArt()
         {
-            return Assets.PlentyOfParking;
+            return Assets.Babth;
         }
 
         protected override CardInfo.Rarity GetRarity()
         {
-            return CardInfo.Rarity.Uncommon;
+            return RarityUtils.GetRarity("Epic");
         }
 
         protected override CardInfoStat[] GetStats()
@@ -45,15 +50,37 @@ namespace AitCards.Cards
                 new CardInfoStat()
                 {
                     positive = true,
+                    stat = "Bullets",
+                    amount = "BIG",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                },
+                new CardInfoStat()
+                {
+                    positive = true,
+                    stat = "Damage",
+                    amount = "HURT",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                },
+                new CardInfoStat
+                {
+                    positive = false,
                     stat = "Ammo",
-                    amount = "+43",
-                    simepleAmount = CardInfoStat.SimpleAmount.aHugeAmountOf
-                 }
+                    amount = "1",
+                    simepleAmount = SimpleAmount.notAssigned
+                },
+                new CardInfoStat
+                {
+                    positive = false,
+                    stat = "Reload Time",
+                    amount = "+50%",
+                    simepleAmount = SimpleAmount.lower
+                }
             };
         }
+
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.ColdBlue;
+            return CardThemeColor.CardThemeColorType.DestructiveRed;
         }
 
         public override string GetModName()

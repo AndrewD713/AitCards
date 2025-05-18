@@ -1,10 +1,7 @@
 ﻿using BepInEx;
-using CardChoiceSpawnUniqueCardPatch.CustomCategories;
 using HarmonyLib;
 using AitCards.Cards;
-using UnboundLib;
 using UnboundLib.Cards;
-
 
 namespace AitCards
 {
@@ -31,11 +28,13 @@ namespace AitCards
             var harmony = new Harmony(ModId);
             harmony.PatchAll();
         }
+
         void Start()
         {
             instance = this;
             CustomCard.BuildCard<Sumesh>();
             CustomCard.BuildCard<PlentyOfParking>();
+            CustomCard.BuildCard<Babth>();
         }
     }
 }
