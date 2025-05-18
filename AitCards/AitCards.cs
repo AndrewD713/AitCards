@@ -35,6 +35,7 @@ namespace AitCards
             CustomCard.BuildCard<Sumesh>();
             CustomCard.BuildCard<PlentyOfParking>();
             CustomCard.BuildCard<Babth>();
+            CustomCard.BuildCard<Bit9>();
         }
     }
 }
