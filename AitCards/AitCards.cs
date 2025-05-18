@@ -36,6 +36,8 @@ namespace AitCards
             CustomCard.BuildCard<PlentyOfParking>();
             CustomCard.BuildCard<Babth>();
             CustomCard.BuildCard<Bit9>();
+            CustomCard.BuildCard<CarbonBlock>();
+            CustomCard.BuildCard<ThreeStars>();
         }
     }
 }

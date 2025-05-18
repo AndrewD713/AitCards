@@ -10,5 +10,7 @@ namespace AitCards
         public static GameObject PlentyOfParking = Bundle.LoadAsset<GameObject>("C_PlentyOfParking");
         public static GameObject Babth = Bundle.LoadAsset<GameObject>("C_Babth");
         public static GameObject Bit9 = Bundle.LoadAsset<GameObject>("C_Bit9");
+        public static GameObject CarbonBlock = Bundle.LoadAsset<GameObject>("C_CarbonBlock");
+        public static GameObject ThreeStars = Bundle.LoadAsset<GameObject>("C_ThreeStars");
     }
 }
