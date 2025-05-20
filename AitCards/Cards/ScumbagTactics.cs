@@ -4,14 +4,14 @@ using static CardInfoStat;
 
 namespace AitCards.Cards
 {
-    class SplitTheMob : CustomCard
+    class ScumbagTactics : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
-            gun.numberOfProjectiles = 6;
-            gun.damage = 1.5f;
-            gun.spread = 0.25f;
-            statModifiers.movementSpeed = 0.75f;
+            statModifiers.regen = 10f;
+            statModifiers.movementSpeed = 2f;
+            statModifiers.health = 0.75f;
+            gun.spread = 0.05f;
         }
 
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
@@ -24,17 +24,17 @@ namespace AitCards.Cards
 
         protected override string GetTitle()
         {
-            return "Split the Mob";
+            return "Scumbag Tactics";
         }
 
         protected override string GetDescription()
         {
-            return "We'll never get all this work done!... but what if...?";
+            return "Boo, Stroup! He's bad at games!";
         }
 
         protected override GameObject GetCardArt()
         {
-            return Assets.SplitTheMob;
+            return Assets.ScumbagTactics;
         }
 
         protected override CardInfo.Rarity GetRarity()
@@ -49,29 +49,29 @@ namespace AitCards.Cards
                 new CardInfoStat
                 {
                     positive = true,
-                    stat = "Projectiles",
-                    amount = "+6",
-                    simepleAmount = SimpleAmount.notAssigned
+                    stat = "Regen",
+                    amount = "+10",
+                    simepleAmount = SimpleAmount.aLittleBitOf
                 },
                 new CardInfoStat
                 {
                     positive = true,
-                    stat = "Damage",
-                    amount = "+50%",
-                    simepleAmount = SimpleAmount.lower
-                },
-                new CardInfoStat
-                {
-                    positive = false,
-                    stat = "Spread",
-                    amount = "+25%",
+                    stat = "Movement Speed",
+                    amount = "+100%",
                     simepleAmount = SimpleAmount.aLittleBitOf
                 },
                 new CardInfoStat
                 {
                     positive = false,
-                    stat = "Movement Speed",
-                    amount = "-50%",
+                    stat = "Health",
+                    amount = "-25%",
+                    simepleAmount = SimpleAmount.aLittleBitOf
+                },
+                new CardInfoStat
+                {
+                    positive = false,
+                    stat = "Spread",
+                    amount = "+5%",
                     simepleAmount = SimpleAmount.aLittleBitOf
                 }
             };
@@ -79,7 +79,7 @@ namespace AitCards.Cards
 
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.FirepowerYellow;
+            return CardThemeColor.CardThemeColorType.DefensiveBlue;
         }
 
         public override string GetModName()

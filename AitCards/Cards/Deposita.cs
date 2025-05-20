@@ -4,14 +4,14 @@ using static CardInfoStat;
 
 namespace AitCards.Cards
 {
-    class HesBadAtGames : CustomCard
+    class Deposita : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
-            statModifiers.regen = 10f;
-            statModifiers.movementSpeed = 2f;
-            statModifiers.health = 0.75f;
-            gun.spread = 0.05f;
+            statModifiers.respawns = 4;
+            gun.projectileSpeed = 0.5f;
+            statModifiers.movementSpeed = 0.5f;
+            statModifiers.health = 0.5f;
         }
 
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
@@ -24,17 +24,17 @@ namespace AitCards.Cards
 
         protected override string GetTitle()
         {
-            return "He's Bad at Games";
+            return "Deposita";
         }
 
         protected override string GetDescription()
         {
-            return "Boo scumbag tactics boooooo!";
+            return "Are you sure you killed me? Looks fine on my end. Can you try it again?";
         }
 
         protected override GameObject GetCardArt()
         {
-            return Assets.HesBadAtGames;
+            return Assets.Deposita;
         }
 
         protected override CardInfo.Rarity GetRarity()
@@ -49,30 +49,30 @@ namespace AitCards.Cards
                 new CardInfoStat
                 {
                     positive = true,
-                    stat = "Regen",
-                    amount = "+10",
-                    simepleAmount = SimpleAmount.aLittleBitOf
+                    stat = "Revives",
+                    amount = "+3",
+                    simepleAmount = SimpleAmount.notAssigned
                 },
                 new CardInfoStat
                 {
-                    positive = true,
+                    positive = false,
+                    stat = "Bullet Speed",
+                    amount = "-50%",
+                    simepleAmount = (SimpleAmount)7
+                },
+                new CardInfoStat
+                {
+                    positive = false,
                     stat = "Movement Speed",
-                    amount = "+100%",
-                    simepleAmount = SimpleAmount.aLittleBitOf
+                    amount = "-50%",
+                    simepleAmount = SimpleAmount.aLotLower
                 },
                 new CardInfoStat
                 {
                     positive = false,
                     stat = "Health",
-                    amount = "-25%",
-                    simepleAmount = SimpleAmount.aLittleBitOf
-                },
-                new CardInfoStat
-                {
-                    positive = false,
-                    stat = "Spread",
-                    amount = "+5%",
-                    simepleAmount = SimpleAmount.aLittleBitOf
+                    amount = "-50%",
+                    simepleAmount = SimpleAmount.aLotLower
                 }
             };
         }

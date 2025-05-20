@@ -38,11 +38,12 @@ namespace AitCards
             CustomCard.BuildCard<Bit9>();
             CustomCard.BuildCard<CarbonBlock>();
             CustomCard.BuildCard<ThreeStars>();
-            CustomCard.BuildCard<HesBadAtGames>();
+            CustomCard.BuildCard<ScumbagTactics>();
             CustomCard.BuildCard<DarnGoodCoffee>();
             CustomCard.BuildCard<Windjammers2>();
             CustomCard.BuildCard<Him>();
             CustomCard.BuildCard<SplitTheMob>();
+            CustomCard.BuildCard<Deposita>();
         }
     }
 }
