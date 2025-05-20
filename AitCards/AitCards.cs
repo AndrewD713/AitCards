@@ -44,6 +44,7 @@ namespace AitCards
             CustomCard.BuildCard<Him>();
             CustomCard.BuildCard<SplitTheMob>();
             CustomCard.BuildCard<Deposita>();
+            CustomCard.BuildCard<ImTooWeak>();
         }
     }
 }

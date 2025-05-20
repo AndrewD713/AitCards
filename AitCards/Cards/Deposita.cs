@@ -8,7 +8,7 @@ namespace AitCards.Cards
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
-            statModifiers.respawns = 4;
+            statModifiers.respawns = 3;
             gun.projectileSpeed = 0.5f;
             statModifiers.movementSpeed = 0.5f;
             statModifiers.health = 0.5f;
