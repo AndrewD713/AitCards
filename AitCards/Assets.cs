@@ -19,5 +19,7 @@ namespace AitCards
         public static GameObject SplitTheMob = Bundle.LoadAsset<GameObject>("C_SplitTheMob");
         public static GameObject Deposita = Bundle.LoadAsset<GameObject>("C_Deposita");
         public static GameObject ImTooWeak = Bundle.LoadAsset<GameObject>("C_ImTooWeak");
+        public static GameObject HotDogLight = Bundle.LoadAsset<GameObject>("C_HotDogLight");
+        public static GameObject ChuggaChugga = Bundle.LoadAsset<GameObject>("C_ChuggaChugga");
     }
 }

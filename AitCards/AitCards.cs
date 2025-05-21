@@ -45,6 +45,8 @@ namespace AitCards
             CustomCard.BuildCard<SplitTheMob>();
             CustomCard.BuildCard<Deposita>();
             CustomCard.BuildCard<ImTooWeak>();
+            CustomCard.BuildCard<HotDogLight>();
+            CustomCard.BuildCard<ChuggaChugga>();
         }
     }
 }
