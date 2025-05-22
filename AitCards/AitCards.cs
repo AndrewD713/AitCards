@@ -48,6 +48,7 @@ namespace AitCards
             CustomCard.BuildCard<HotDogLight>();
             CustomCard.BuildCard<ChuggaChugga>();
             CustomCard.BuildCard<Enablement>();
+            CustomCard.BuildCard<DogAndPonyShow>();
         }
     }
 }
