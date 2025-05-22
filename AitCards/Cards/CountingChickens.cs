@@ -9,8 +9,7 @@ namespace AitCards.Cards
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             gun.ammo = 9;
-            gun.reflects = 1;
-            gun.projectileColor = new Color(255f, 255f, 240f);
+            gun.projectileColor = new Color(255f, 255f, 240);
         }
 
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
