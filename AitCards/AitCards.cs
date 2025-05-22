@@ -49,6 +49,7 @@ namespace AitCards
             CustomCard.BuildCard<ChuggaChugga>();
             CustomCard.BuildCard<Enablement>();
             CustomCard.BuildCard<DogAndPonyShow>();
+            CustomCard.BuildCard<CountingChickens>();
         }
     }
 }

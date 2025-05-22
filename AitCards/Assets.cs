@@ -23,5 +23,6 @@ namespace AitCards
         public static GameObject ChuggaChugga = Bundle.LoadAsset<GameObject>("C_ChuggaChugga");
         public static GameObject Enablement = Bundle.LoadAsset<GameObject>("C_Enablement");
         public static GameObject DogAndPonyShow = Bundle.LoadAsset<GameObject>("C_DogAndPonyShow");
+        public static GameObject CountingChickens = Bundle.LoadAsset<GameObject>("C_CountingChickens");
     }
 }
