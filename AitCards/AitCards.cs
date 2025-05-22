@@ -47,6 +47,7 @@ namespace AitCards
             CustomCard.BuildCard<ImTooWeak>();
             CustomCard.BuildCard<HotDogLight>();
             CustomCard.BuildCard<ChuggaChugga>();
+            CustomCard.BuildCard<Enablement>();
         }
     }
 }

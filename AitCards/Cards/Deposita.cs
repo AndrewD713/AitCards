@@ -9,7 +9,7 @@ namespace AitCards.Cards
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             statModifiers.respawns = 3;
-            gun.projectileSpeed = 0.5f;
+            gun.projectileSpeed = 0.75f;
             statModifiers.movementSpeed = 0.5f;
             statModifiers.health = 0.5f;
         }
@@ -57,7 +57,7 @@ namespace AitCards.Cards
                 {
                     positive = false,
                     stat = "Bullet Speed",
-                    amount = "-50%",
+                    amount = "-25%",
                     simepleAmount = (SimpleAmount)7
                 },
                 new CardInfoStat
