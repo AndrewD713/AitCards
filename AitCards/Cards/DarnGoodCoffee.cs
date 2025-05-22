@@ -56,7 +56,7 @@ namespace AitCards.Cards
                 {
                     positive = true,
                     stat = "Attack Speed",
-                    amount = "+25%",
+                    amount = "+50%",
                     simepleAmount = SimpleAmount.aLittleBitOf
                 },
                 new CardInfoStat

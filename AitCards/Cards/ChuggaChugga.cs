@@ -10,7 +10,7 @@ namespace AitCards.Cards
         {
             gun.bursts = 4;
             gun.timeBetweenBullets = 0.12f;
-            gun.reflects = 1;
+            gun.reflects = 2;
             statModifiers.movementSpeed = 1.5f;
         }
 
@@ -39,7 +39,7 @@ namespace AitCards.Cards
 
         protected override CardInfo.Rarity GetRarity()
         {
-            return CardInfo.Rarity.Rare;
+            return CardInfo.Rarity.Uncommon;
         }
 
         protected override CardInfoStat[] GetStats()

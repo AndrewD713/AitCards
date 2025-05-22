@@ -10,7 +10,7 @@ namespace AitCards.Cards
         {
             gun.unblockable = true;
             statModifiers.respawns = -2;
-            gun.reloadTime = 1.25f;
+            gun.reloadTime = 1.5f;
         }
 
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
@@ -63,7 +63,7 @@ namespace AitCards.Cards
                 {
                     positive = false,
                     stat = "Reload Time",
-                    amount = "+25%",
+                    amount = "+50%",
                     simepleAmount = SimpleAmount.slightlyLower
                 }
             };
