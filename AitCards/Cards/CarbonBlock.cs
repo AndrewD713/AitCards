@@ -9,7 +9,7 @@ namespace AitCards.Cards
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             block.additionalBlocks = 2;
-            block.cdMultiplier = 0.50f;
+            block.cdMultiplier = 0.8f;
             statModifiers.movementSpeed = 0.50f;
         }
 
@@ -56,7 +56,7 @@ namespace AitCards.Cards
                 {
                     positive = true,
                     stat = "Block Cooldown",
-                    amount = "-50%",
+                    amount = "-20%",
                     simepleAmount = SimpleAmount.Some
                 },
                 new CardInfoStat
