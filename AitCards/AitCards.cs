@@ -50,6 +50,7 @@ namespace AitCards
             CustomCard.BuildCard<Enablement>();
             CustomCard.BuildCard<DogAndPonyShow>();
             CustomCard.BuildCard<CountingChickens>();
+            CustomCard.BuildCard<OohBuckshot>();
         }
     }
 }
