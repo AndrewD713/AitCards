@@ -9,8 +9,7 @@ namespace AitCards.Cards
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             gun.percentageDamage = 0.02f;
-            gun.bursts = 2;
-            gun.timeBetweenBullets = 0.1f;
+            gun.ammo = 2;
         }
 
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
@@ -55,10 +54,10 @@ namespace AitCards.Cards
                 new CardInfoStat
                 {
                     positive = true,
-                    stat = "Bursts",
+                    stat = "Ammo",
                     amount = "+2",
                     simepleAmount = SimpleAmount.notAssigned
-                },      
+                },
             };
         }
 
