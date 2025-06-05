@@ -8,7 +8,7 @@ namespace AitCards.Cards
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
-            gun.numberOfProjectiles = 6;
+            gun.numberOfProjectiles = 4;
             gun.projectileSpeed = 3f;
             gun.knockback = 1.5f;
             gun.damage = 0.5f;
@@ -52,43 +52,43 @@ namespace AitCards.Cards
                 {
                     positive = true,
                     stat = "Projectiles",
-                    amount = "+6",
-                    simepleAmount = CardInfoStat.SimpleAmount.aLotOf
+                    amount = "+4",
+                    simepleAmount = SimpleAmount.notAssigned
                 },
                 new CardInfoStat
                 {
                     positive = true,
                     stat = "Bullet Speed",
                     amount = "+300%",
-                    simepleAmount = SimpleAmount.aHugeAmountOf
+                    simepleAmount = SimpleAmount.notAssigned
                 },
                 new CardInfoStat
                 {
                     positive = true,
                     stat = "Knockback",
                     amount = "+50%",
-                    simepleAmount = CardInfoStat.SimpleAmount.aLotOf
+                    simepleAmount = SimpleAmount.notAssigned
                 },            
                 new CardInfoStat
                 {
                     positive = false,
                     stat = "Damage",
                     amount = "-50%",
-                    simepleAmount = CardInfoStat.SimpleAmount.aLittleBitOf
+                    simepleAmount = SimpleAmount.notAssigned
                 },
                 new CardInfoStat
                 {
                     positive = false,
                     stat = "Spread",
                     amount = "+25%",
-                    simepleAmount = SimpleAmount.aLittleBitOf
+                    simepleAmount = SimpleAmount.notAssigned
                 },
                 new CardInfoStat
                 {
                     positive = false,
                     stat = "Reload Time",
                     amount = "+20%",
-                    simepleAmount = CardInfoStat.SimpleAmount.aLittleBitOf
+                    simepleAmount = SimpleAmount.notAssigned
                 }
             };
         }

@@ -51,6 +51,7 @@ namespace AitCards
             CustomCard.BuildCard<DogAndPonyShow>();
             CustomCard.BuildCard<CountingChickens>();
             CustomCard.BuildCard<OohBuckshot>();
+            CustomCard.BuildCard<ShirtBuddies>();
         }
     }
 }

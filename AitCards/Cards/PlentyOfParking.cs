@@ -1,5 +1,6 @@
 ﻿using UnboundLib.Cards;
 using UnityEngine;
+using static CardInfoStat;
 
 namespace AitCards.Cards
 {
@@ -8,6 +9,7 @@ namespace AitCards.Cards
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             gun.ammo = 43;
+            gun.reloadTime = 4f;
         }
 
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
@@ -48,7 +50,14 @@ namespace AitCards.Cards
                     stat = "Ammo",
                     amount = "+43",
                     simepleAmount = CardInfoStat.SimpleAmount.aHugeAmountOf
-                 }
+                },
+                new CardInfoStat
+                {
+                    positive = false,
+                    stat = "Reload Time",
+                    amount = "+300%",
+                    simepleAmount = (SimpleAmount)4
+                }
             };
         }
         protected override CardThemeColor.CardThemeColorType GetTheme()
